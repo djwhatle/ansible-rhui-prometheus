@@ -1,0 +1,36 @@
+---
+
+- hosts: prometheus_servers
+  remote_user: ec2-user
+  strategy: debug
+  become: True
+  roles:
+    - prometheus
+  vars:
+    prometheus_components:
+      - prometheus
+      - node_exporter
+      - alertmanager
+
+- hosts: rhua_prometheus_exporters
+  remote_user: ec2-user
+  strategy: debug
+  become: True
+  roles:
+    - prometheus
+  vars:
+    prometheus_components:
+      - node_exporter
+      - apache_exporter
+      - mongodb_exporter
+
+- hosts: cds_prometheus_exporters
+  remote_user: ec2-user
+  strategy: debug
+  become: True
+  roles:
+    - prometheus
+  vars:
+    prometheus_components:
+      - node_exporter
+      - apache_exporter

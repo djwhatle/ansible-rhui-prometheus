@@ -1,0 +1,10 @@
+[rhua_prometheus_exporters]
+# rhua.example.com
+
+[cds_prometheus_exporters]
+# cds01.example.com
+# cds02.example.com
+
+[prometheus_servers]
+# prometheus.example.com
+
