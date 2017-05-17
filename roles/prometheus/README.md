@@ -1,7 +1,7 @@
 
-prometheus playbook for RHUI support
+prometheus role for setting up RHUI monitoring
 ============
-
+Role originally created by william.yeh
 
 ### Optional variables: general settings
 
